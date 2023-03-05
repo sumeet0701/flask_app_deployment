@@ -1,14 +1,12 @@
 from flask import Flask
+import numpy as np
+import pandas as pd
 
 app = Flask(__name__)
 
-
-@app.route('/')
-
-
+@app.route('/', methods=['GET'])
 def home():
-    return "This is my first flask application"
+    return "Hello World"
 
-if __name__ == '__main__':
-    app.run(debug=True)
-
+if __name__=="__main__":
+    app.run(debug=True) # change your portnumber to 8080
